@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recepie } from '../recepie.model';
 import { RecepieServices } from 'src/app/shared/services/recepie.service';
 
@@ -8,13 +8,12 @@ import { RecepieServices } from 'src/app/shared/services/recepie.service';
     styleUrls: ['recepie-list.component.css']
 })
 export class RecepieListComponent implements OnInit {
-    @Output() selectedItem = new EventEmitter<Recepie>();
     recepies: Recepie[];
 
     constructor(private recepieService: RecepieServices) { }
 
     selectItem(itemSelected: Recepie) {
-        this.selectedItem.emit(itemSelected);
+        this.recepieService.selectRecepie.emit(itemSelected);
     }
 
     ngOnInit(): void {

@@ -1,5 +1,5 @@
-import { Ingredients } from "src/app/shopping-list/ingredients.model";
-import { EventEmitter } from "@angular/core";
+import { Ingredients } from 'src/app/shopping-list/ingredients.model';
+import { EventEmitter } from '@angular/core';
 
 export class IngredientsServices {
     ingredients: Ingredients[] = [

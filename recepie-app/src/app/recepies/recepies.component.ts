@@ -9,7 +9,6 @@ import { RecepieServices } from '../shared/services/recepie.service';
   providers: [RecepieServices]
 })
 export class RecepiesComponent implements OnInit {
-  itemSelected: Recepie;
 
   constructor() { }
 

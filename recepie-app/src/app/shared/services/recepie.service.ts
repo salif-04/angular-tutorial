@@ -1,4 +1,5 @@
 import { Recepie } from 'src/app/recepies/recepie.model';
+import { EventEmitter } from '@angular/core';
 
 export class RecepieServices {
     private recepies: Recepie[] = [
@@ -9,6 +10,7 @@ export class RecepieServices {
         'Yummy Black Olive pizza',
         'https://www.seriouseats.com/assets_c/2015/07/20150702-sous-vide-hamburger-anova-16-thumb-1500xauto-424812.jpg')
     ];
+    selectRecepie = new EventEmitter<Recepie>();
 
     getRecepies() {
         return this.recepies.slice();
