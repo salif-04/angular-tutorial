@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-xs-4">
-        <app-recepie-list></app-recepie-list>
+        <app-recepie-list (selectedItem)="itemSelected = $event;"></app-recepie-list>
     </div>
     <div class="col-xs-8">
-        <app-recepie-details></app-recepie-details>
+        <app-recepie-details [itemDisplay]="itemSelected"></app-recepie-details>
     </div>
 </div>

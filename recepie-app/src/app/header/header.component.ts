@@ -10,7 +10,6 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   loadComp(selectedComp: string) {
-    console.log("Change");
     this.loadedComp.emit(selectedComp);
   }
 

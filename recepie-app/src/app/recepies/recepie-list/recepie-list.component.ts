@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { Recepie } from '../recepie.model';
 
 @Component({
@@ -7,6 +7,7 @@ import { Recepie } from '../recepie.model';
     styleUrls: ['recepie-list.component.css']
 })
 export class RecepieListComponent implements OnInit {
+    @Output() selectedItem = new EventEmitter<Recepie>();
     recepies: Recepie[] = [
         new Recepie('Burger',
         'A tasty li\'l Burger',
@@ -16,6 +17,10 @@ export class RecepieListComponent implements OnInit {
         'https://www.seriouseats.com/assets_c/2015/07/20150702-sous-vide-hamburger-anova-16-thumb-1500xauto-424812.jpg')
     ];
     constructor() { }
+
+    selectItem(itemSelected: Recepie) {
+        this.selectedItem.emit(itemSelected);
+    }
 
     ngOnInit(): void { }
 }

@@ -2,16 +2,16 @@
     <form>
         <div class="row">
             <label for="name">Name</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" #name>
         </div>
         <div class="row">
             <label for="amount">Amount</label>
-            <input type="Number" class="form-control">
+            <input type="Number" class="form-control" #amt>
         </div>
         <div class="row">
-            <button type="submit" class="btn btn-success">Add</button>
-            <button type="submit" class="btn btn-danger">Delete</button>
-            <button type="submit" class="btn btn-default">Clear</button>
+            <button type="submit" (click)="onAddItem()" class="btn btn-success">Add</button>
+            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-default">Clear</button>
         </div>
     </form>
 </div>
