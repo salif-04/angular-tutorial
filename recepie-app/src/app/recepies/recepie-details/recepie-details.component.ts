@@ -11,6 +11,10 @@ export class RecepieDetailsComponent implements OnInit {
     itemDisplay: Recepie;
     constructor(private recepieService: RecepieServices) { }
 
+    addToCart() {
+        this.recepieService.addToCart(this.itemDisplay.ingList);
+    }
+
     ngOnInit(): void {
         this.recepieService.selectRecepie
         .subscribe((rec: Recepie) => {

@@ -5,8 +5,7 @@ import { IngredientsServices } from '../shared/services/ingredients.service';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
-  styleUrls: ['./shopping-list.component.css'],
-  providers: [IngredientsServices]
+  styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
   ingredients: Ingredients[];
