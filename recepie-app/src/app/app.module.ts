@@ -15,15 +15,8 @@ import { RecepeiStartComponent } from './recepies/recepie-start/recepei-start.co
 import { DropdownDirective } from './shared/dropdown.directive';
 import { IngredientsServices } from './shared/services/ingredients.service';
 
+import { AppRoutingModule } from './app-routing.module';
 
-const routes: Routes = [
-  {path: '', redirectTo: '/recepie', pathMatch: 'full'},
-  {path: 'recepie', component: RecepiesComponent, children: [
-    {path: '', component: RecepeiStartComponent, pathMatch: 'full'},
-    {path: ':id', component: RecepieDetailsComponent}
-  ]},
-  {path: 'shopping-list', component: ShoppingListComponent}
-];
 
 @NgModule({
   declarations: [
@@ -40,9 +33,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule
   ],
-  exports: [RouterModule],
   providers: [IngredientsServices],
   bootstrap: [AppComponent]
 })
