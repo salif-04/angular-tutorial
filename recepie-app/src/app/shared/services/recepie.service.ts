@@ -19,10 +19,13 @@ export class RecepieServices {
             new Ingredients('Butter', 2)
         ])
     ];
-    selectRecepie = new EventEmitter<Recepie>();
 
     getRecepies() {
         return this.recepies.slice();
+    }
+
+    getRecepie(index: number) {
+        return this.recepies.slice()[index];
     }
 
     addToCart(ingList: Ingredients[]) {

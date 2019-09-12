@@ -1,6 +1,6 @@
 <div class="row">
-    <div>
-        <a *ngFor="let recepie of recepies" (click)="selectItem(recepie)" class="list-group-item">
+    <div routerLinkActive="open">
+            <a *ngFor="let recepie of recepies; let i = index" [routerLink]="[i]" class="list-group-item">
             <h4><b>{{recepie.name}}</b></h4>
             <p><em>{{recepie.desc}}</em></p>
         </a>

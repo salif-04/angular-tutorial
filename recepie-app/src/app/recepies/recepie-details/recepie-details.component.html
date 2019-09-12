@@ -1,14 +1,11 @@
 <div class="row container">
-    <div *ngIf="itemDisplay">
+    <div>
         <h3>{{itemDisplay.name}}</h3>
         <img [src]="itemDisplay.imgUrl" alt="itemDisplay.name" class="img-thumbnail">
         <p>{{itemDisplay.desc}}</p>
         <ul>
             <li *ngFor="let ing of itemDisplay.ingList">{{ing.name}} ({{ing.amount}})</li>
         </ul>
-    </div>
-    <div *ngIf="!itemDisplay">
-        <h3>Please Select a Recepie.</h3>
     </div>
     <!-- <div>
         <a href="#" class="dropdown-toggle btn btn-primary btn-lg">Manage<span class="caret"></span></a>

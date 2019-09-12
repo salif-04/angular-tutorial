@@ -12,10 +12,6 @@ export class RecepieListComponent implements OnInit {
 
     constructor(private recepieService: RecepieServices) { }
 
-    selectItem(itemSelected: Recepie) {
-        this.recepieService.selectRecepie.emit(itemSelected);
-    }
-
     ngOnInit(): void {
         this.recepies = this.recepieService.getRecepies();
     }

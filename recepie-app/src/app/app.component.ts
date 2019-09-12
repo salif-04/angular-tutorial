@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  selectedComp: string = 'recepie';
+
   constructor() { }
-  navigate(comp: string) {
-    this.selectedComp = comp;
-  }
+
 }

@@ -6,12 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() loadedComp = new EventEmitter<string>();
-  constructor() { }
 
-  loadComp(selectedComp: string) {
-    this.loadedComp.emit(selectedComp);
-  }
+  constructor() { }
 
   ngOnInit() {
   }
