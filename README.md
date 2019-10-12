@@ -6,6 +6,6 @@ A repository to practice
 
 
 ### Application
-- Recepie App
+- **Recepie App** from [Angular 8 - The Complete Guide](https://www.udemy.com/course/the-complete-guide-to-angular-2/)
 
 
