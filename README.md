@@ -1,8 +1,6 @@
-# Angular JS tutorial
+# Angular Tutorial
 
-This repo will teach your angular JS in stepwise manner.
+A repository to practice [Angular](https://angular.io/).
 
-Currently, it includes **receipe app**.
-
-It used routing module in Angular JS.
-
+### Applications
+- **receipe app** from [Angular 8 - The Complete Guide](https://www.udemy.com/course/the-complete-guide-to-angular-2/).
